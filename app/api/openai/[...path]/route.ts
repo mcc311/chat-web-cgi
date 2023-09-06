@@ -5,6 +5,7 @@ import { prettyObject } from "@/app/utils/format";
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "../../auth";
 import { requestOpenai } from "../../common";
+import { getToken } from "next-auth/jwt";
 
 const ALLOWD_PATH = new Set(Object.values(OpenaiPath));
 
@@ -44,7 +45,8 @@ async function handle(
       },
     );
   }
-
+  const jwtToken = await getToken({ req });
+  console.log("[OpenAI Route] username: ", jwtToken?.name);
   const authResult = auth(req);
   if (authResult.error) {
     return NextResponse.json(authResult, {
@@ -54,7 +56,6 @@ async function handle(
 
   try {
     const response = await requestOpenai(req);
-
     // list models
     if (subpath === OpenaiPath.ListModelPath && response.status === 200) {
       const resJson = (await response.json()) as OpenAIListModelResponse;

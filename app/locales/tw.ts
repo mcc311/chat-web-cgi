@@ -90,8 +90,8 @@ const tw: PartialLocaleType = {
     },
     Mask: {
       Splash: {
-        Title: "面具啟動頁面",
-        SubTitle: "新增聊天時，呈現面具啟動頁面",
+        Title: "扮演啟動頁面",
+        SubTitle: "新增聊天時，呈現扮演啟動頁面",
       },
     },
     Prompt: {
@@ -132,7 +132,7 @@ const tw: PartialLocaleType = {
       },
       IsChecking: "正在檢查…",
       Check: "重新檢查",
-      NoAccess: "輸入API Key查看餘額",
+      NoAccess: "輸入 API Key 查看餘額",
     },
     AccessCode: {
       Title: "授權碼",
@@ -182,11 +182,11 @@ const tw: PartialLocaleType = {
   Plugin: { Name: "外掛" },
   FineTuned: { Sysmessage: "你是一個助手" },
   Mask: {
-    Name: "面具",
+    Name: "扮演",
     Page: {
-      Title: "預設角色面具",
+      Title: "預設角色",
       SubTitle: (count: number) => `${count} 個預設角色定義`,
-      Search: "搜尋角色面具",
+      Search: "搜尋角色",
       Create: "新增",
     },
     Item: {
@@ -194,12 +194,12 @@ const tw: PartialLocaleType = {
       Chat: "對話",
       View: "查看",
       Edit: "編輯",
-      Delete: "删除",
+      Delete: "刪除",
       DeleteConfirm: "確認删除？",
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `編輯預設面具 ${readonly ? "（只读）" : ""}`,
+        `編輯預設角色 ${readonly ? "（唯讀）" : ""}`,
       Download: "下載預設",
       Clone: "克隆預設",
     },
@@ -211,11 +211,11 @@ const tw: PartialLocaleType = {
   NewChat: {
     Return: "返回",
     Skip: "跳過",
-    Title: "挑選一個面具",
-    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
+    Title: "挑選一個角色",
+    SubTitle: "現在開始，與角色背後的靈魂思維碰撞",
     More: "搜尋更多",
     NotShow: "不再呈現",
-    ConfirmNoShow: "確認禁用？禁用後可以随時在設定中重新啟用。",
+    ConfirmNoShow: "確認禁用？禁用後可以隨時在設定中重新啟用。",
   },
   UI: {
     Confirm: "確認",
