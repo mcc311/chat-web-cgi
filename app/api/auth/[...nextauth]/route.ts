@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 const client = ldap.createClient({
   url: process.env.LDAP_URI as string,
 });
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "LDAP",
